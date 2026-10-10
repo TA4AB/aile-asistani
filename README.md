@@ -7,6 +7,9 @@ Aile Asistanı, kullanıcının belirlediği saatlerde iyi olma kontrolü yapan 
 ## Özellikler
 
 - Günlük kontrol alarmları oluşturma ve yönetme
+- Gerçek alarm sesi/tekrar akışını SMS göndermeden deneyen test alarmı
+- SMS, konum, bildirim, kesin alarm ve tam ekran alarm izinleri için durum kontrolü
+- Kayıtlı acil durum kişisine ücret uyarısı içeren, kullanıcı onaylı test SMS'i
 - Yanıt ekranını açan sesli alarm
 - Ayarlardan 1–10 arasında seçilebilen uyarı tekrarı; varsayılan olarak her uyarı 1 dakika çalar ve uyarılar arasında 10 saniye beklenir
 - Yanıt verilmezse kayıtlı acil durum kişisine konum bağlantısı içeren SMS gönderme denemesi
@@ -35,7 +38,7 @@ gradlew.bat :app:assembleDebug
 
 ## İlk kullanım
 
-1. Profil bilgilerini girin; sağlık bilgisi alanı isteğe bağlıdır.
+1. Profil bilgilerini girin; kişi için not alanı isteğe bağlıdır.
 2. Ana ekranda acil durum kişisinin adını ve telefon numarasını kaydedin.
 3. Günlük kontrol saatlerini ekleyin.
 4. Ayarlar'da uyarı tekrarı sayısını ve titreşimi seçin; isterseniz test alarmını çalıştırın.
@@ -47,7 +50,7 @@ SMS, yalnızca yanıt süresi ve tüm uyarı tekrarları tamamlandıktan sonra g
 
 Uygulama; alarm planlama, bildirim ve kilit ekranında kontrol uyarısı gösterebilme, titreşim, acil durum SMS'i gönderme ve yanıt alınmadığında konum ekleme amaçlarıyla Android izinleri ister. İzinleri vermemek ilgili özelliği devre dışı bırakabilir.
 
-Profil adı, yaş, isteğe bağlı sağlık bilgisi, acil durum kişisi adı/telefonu, alarm saatleri, tercih edilen tekrar sayısı, SMS şablonu ve yerel istatistikler uygulamanın özel depolamasında tutulur. Uygulama kendi sunucusuna bu bilgileri göndermez; ancak Android'in cihaz yedekleme özelliği uygulama verilerini cihaz dışına yedekleyebilir. Yanıt verilmediğinde, izin varsa cihazın konumu SMS içeriğine eklenebilir ve SMS mobil operatör üzerinden kayıtlı kişiye iletilir.
+Profil adı, yaş, isteğe bağlı kişi notları, acil durum kişisi adı/telefonu, alarm saatleri, tercih edilen tekrar sayısı, SMS şablonu ve yerel istatistikler uygulamanın özel depolamasında tutulur. Uygulama kendi sunucusuna bu bilgileri göndermez; ancak Android'in cihaz yedekleme özelliği uygulama verilerini cihaz dışına yedekleyebilir. Yanıt verilmediğinde, izin varsa cihazın konumu SMS içeriğine eklenebilir ve SMS mobil operatör üzerinden kayıtlı kişiye iletilir.
 
 Ayrıntılar ve güncel iletişim bilgisi için [Gizlilik Politikası](PRIVACY_POLICY.md) sayfasına bakın.
 
@@ -64,7 +67,7 @@ Ek yayın öncesi işler:
 - `USE_EXACT_ALARM` kısıtlı kullanım izninin uygulamanın temel işlevine uygunluğunu doğrulayın. Uygun değilse kaldırıp kullanıcı tarafından verilebilen `SCHEDULE_EXACT_ALARM` akışını kullanmayı değerlendirin.
 - `mediaPlayback` foreground service türünü, kullanım gerekçesini ve inceleme videosunu Play Console'da beyan edin; hedef API yükseltmesinin gerektirdiği manifest/çalışma zamanı değişikliklerini uygulayın.
 - SMS ve konum izin pencerelerinden önce, verinin ne zaman, kime ve hangi amaçla kullanılacağını açıklayan belirgin bir uygulama içi bildirim ve kullanıcı onayı ekleyin.
-- Google Play **Data safety** formunu gerçek veri akışına göre doldurun; GitHub'da barındırılan gizlilik politikası bağlantısını mağaza kaydına ekleyin ve aşağıdaki geliştirici e-posta yer tutucusunu gerçek, izlenen bir adresle değiştirin.
+- Google Play **Data safety** formunu gerçek veri akışına göre doldurun ve GitHub'da barındırılan gizlilik politikası bağlantısını mağaza kaydına ekleyin.
 - Google Play'de yayımlanacak uygulamalar için **Health apps declaration** formunu tamamlayın. Uygulama sağlık özelliği sunmadığı sonucuna varılsa bile Play Console formu bunu beyan etmenizi ister; isteğe bağlı sağlık notu alanı ve yaşlı bakımı amacı için doğru kategoriyi seçin.
 - Gizlilik metnindeki veri yedekleme, saklama, silme ve iletişim bilgilerini kontrol edin; Android yedekleme davranışını uygulama ayarlarıyla tutarlı hale getirin.
 - Hedef kitle/yaş beyanı, mağaza açıklaması, ekran görüntüleri ve uygulama davranışını birbiriyle tutarlı hazırlayın.

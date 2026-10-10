@@ -4,12 +4,10 @@
 
 Bu politika, Aile Asistanı Android uygulamasının hangi bilgilere eriştiğini, bunları nasıl kullandığını ve kullanıcıların seçimlerini açıklar.
 
-> **Yayın öncesi tamamlanması gereken bilgi:** Uygulama geliştiricisinin izlenen iletişim e-posta adresi bu depoda yer almıyor. Bu sayfayı herkese açmadan ve Google Play'e göndermeden önce aşağıdaki `[İLETİŞİM E-POSTASI]` alanını gerçek bir adresle değiştirin.
-
 ## Veri sorumlusu ve iletişim
 
 - **Geliştirici:** Arif Onur Bütün (Ar-Se Soft Technology)
-- **E-posta:** [İLETİŞİM E-POSTASI]
+- **E-posta:** [info@arsesoft.com](mailto:info@arsesoft.com)
 
 Gizlilik veya kişisel verilerinizle ilgili talepleriniz için bu adrese başvurabilirsiniz.
 
@@ -23,7 +21,7 @@ Uygulama acil servislerin, profesyonel bakımın veya tıbbi hizmetlerin yerine 
 
 Kullanıcının girmesi veya uygulamanın çalışmasıyla aşağıdaki bilgiler işlenebilir:
 
-- **Profil:** ad, yaş ve isteğe bağlı sağlık/durum notu.
+- **Profil:** ad, yaş ve isteğe bağlı kişi notları.
 - **Acil durum kişisi:** kullanıcının girdiği kişinin adı ve telefon numarası.
 - **Kontrol ayarları:** alarm saatleri, uyarı tekrar sayısı, titreşim tercihi ve SMS şablonu.
 - **Yerel istatistikler:** toplam kontroller, başarılı yanıt sayısı ve son kontrol zamanı.
@@ -31,7 +29,7 @@ Kullanıcının girmesi veya uygulamanın çalışmasıyla aşağıdaki bilgiler
 
 Profil, ayarlar ve istatistikler Android uygulamasının özel depolamasında tutulur (`SharedPreferences`). Uygulama tarafından işletilen bir sunucuya veya analiz/ reklam hizmetine bu bilgilerin gönderildiği bir işlev mevcut kodda bulunmuyor. Uygulama kaynak manifestinde internet izni tanımlı değildir. Bununla birlikte Android cihazın sistem yedekleme özelliği uygulama verilerini cihaz dışına yedekleyebilir; bu davranış kullanıcının cihaz/hesap ayarlarına ve uygulamanın yedekleme kurallarına bağlıdır.
 
-Sağlık bilgisi alanı isteğe bağlıdır. Bu alana gereğinden fazla veya acil durumda SMS ile paylaşılmasını istemediğiniz hassas bilgileri yazmayın.
+Kişi notları alanı isteğe bağlıdır. Bu notlar acil durum SMS'ine eklenmez. Bu alana gereğinden fazla hassas bilgi yazmayın.
 
 ## İzinler ve kullanım amaçları
 
